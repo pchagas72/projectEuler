@@ -1,32 +1,28 @@
-def reverse_string(produto) -> str :
-    string = str(produto)
-    newString = ""
-    for i in range(len(string)):
-        newString += string[len(string)-i-1]
-    return newString
+def reverse_string(produto) -> str:
+    return str(produto)[::-1]
 
-def check_palindrom(produto) -> bool :
+
+def check_palindrom(produto) -> bool:
     return str(produto) == reverse_string(produto)
 
-def helper(produto, largest) -> int :
-    if not check_palindrom(produto) :
+
+def update_largest_palindrom(produto, largest) -> int:
+    if not check_palindrom(produto) or produto <= largest:
         return largest
-    if produto >= largest :
-        return produto
-    return largest
-
-def solve() -> int :
-    largest = 0
-    for i in range(100, 1000):
-        for k in range(100, 1000):
-            produto = i * k
-            largest = helper(produto, largest)
-
-    return largest
-
-def main() -> None :
-    print(solve())
+    return produto
 
 
-if __name__ == "__main__" :
-          main()
+def solve() -> int:
+    largest_palindrom: int = 0
+    for first_product in range(100, 1000):
+        for second_product in range(100, 1000):
+            produto: int = first_product * second_product
+            largest_palindrom = update_largest_palindrom(
+                produto, largest_palindrom
+            )
+
+    print(largest_palindrom)
+
+
+if __name__ == '__main__':
+    solve()
