@@ -1,11 +1,15 @@
+"""This is the python code for the 9th challange in projecteuler.com"""
+
+
 def solve(limit: int) -> int:
+    """Function that solves the 9th problem in project euler."""
     max_a_b = int(limit / 2)
-    for a in range(1, max_a_b):
-        for b in range(1, max_a_b):
-            c = limit - a - b
-            if a**2 + b**2 == c**2 and a < b < c:
-                print('Found', a, b, c)
-                return a * b * c
+    for var_a in range(1, max_a_b):
+        for var_b in range(1, max_a_b):
+            var_c = limit - var_a - var_b
+            if var_a**2 + var_b**2 == var_c**2 and var_a < var_b < var_c:
+                print('Found', var_a, var_b, var_c)
+                return var_a * var_b * var_c
     return None
 
 

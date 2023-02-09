@@ -1,4 +1,6 @@
+"""This code is fodao"""
 def is_prime(number: int) -> bool:
+    """This code is fodao"""
     if number == 1:
         return False
     i = 2
@@ -10,16 +12,18 @@ def is_prime(number: int) -> bool:
 
 
 def solve(limit: int) -> int:
-    sum = 0
+    """This code is fodao"""
+    primes_sum = 0
     test_number = 1
     while test_number < limit:
         if is_prime(test_number):
-            sum += test_number
+            primes_sum += test_number
         test_number += 1
-    return sum
+    return primes_sum
 
 
 def get_answers() -> None:
+    """This code is fodao"""
     print(solve(2000000))
 
 
