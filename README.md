@@ -4,3 +4,4 @@ Depois de 10 desafios, eu decidi que a línguagem que mais estou acostumado para
 <br>
 ##### Todo:
 - Trocar os nomes das pastas para o nome dos desafios.
+- Add big o notation for all python scripts.
