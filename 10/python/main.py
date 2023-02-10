@@ -1,6 +1,8 @@
-"""This code is fodao"""
+"""This code solves the 10th problem in projecteuler.net"""
+
+
 def is_prime(number: int) -> bool:
-    """This code is fodao"""
+    """This function checks if a number is prime with O(sqrt(n))"""
     if number == 1:
         return False
     i = 2
@@ -12,7 +14,7 @@ def is_prime(number: int) -> bool:
 
 
 def solve(limit: int) -> int:
-    """This code is fodao"""
+    """This function solves the problem using the previous ones"""
     primes_sum = 0
     test_number = 1
     while test_number < limit:
@@ -22,10 +24,5 @@ def solve(limit: int) -> int:
     return primes_sum
 
 
-def get_answers() -> None:
-    """This code is fodao"""
-    print(solve(2000000))
-
-
 if __name__ == '__main__':
-    get_answers()
+    print(solve(2000000))
