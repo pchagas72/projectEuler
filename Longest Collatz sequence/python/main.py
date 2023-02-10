@@ -37,4 +37,4 @@ def solve(max_starting_point: int) -> int:
 
 if __name__ == '__main__':
     solution = solve(1000000)
-    print(solution)
+    print("The solution is", solution)
