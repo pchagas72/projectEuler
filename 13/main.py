@@ -1,4 +1,4 @@
-"""This code solves the 13th challange in projecteuler.net"""
+"""This code solves the 13th challange in projecteuler.net with O(n)"""
 
 
 def read_data(file_name: str) -> list[int]:
@@ -6,21 +6,16 @@ def read_data(file_name: str) -> list[int]:
     This function takes a .txt with integers and returns them in groups
     of 50 digit integers.
     """
-    with open(file_name, 'r', encoding="UTF-8") as file_object:
-        data = file_object.readlines()
-    counter = 0
+    with open(file_name, 'r', encoding='UTF-8') as file_object:
+        data = file_object.read()
+    all_numbers_list = [number for number in data if number.isnumeric()]
     return_list = []
-    placeholder = ''
-    for line in data:
-        for char in line:
-            if char == '\n':
-                continue
-            placeholder += char
-            counter += 1
-            if counter >= 50:
-                return_list.append(int(placeholder))
-                placeholder = ''
-                counter = 0
+    fifty_digit_number_placeholder = ''
+    for number in all_numbers_list:
+        fifty_digit_number_placeholder += number
+        if len(fifty_digit_number_placeholder) >= 50:
+            return_list.append(int(fifty_digit_number_placeholder))
+            fifty_digit_number_placeholder = ''
     return return_list
 
 
@@ -35,5 +30,4 @@ def solve(fifty_digit_numbers: list[int]) -> int:
 
 
 if __name__ == '__main__':
-    x = read_data('data.txt')
-    print('The answer is',solve(x))
+    print(solve(read_data('data.txt')))
