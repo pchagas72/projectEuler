@@ -1,4 +1,4 @@
-"""This code solves the 13th challange in projecteuler.net with O(n)"""
+"""This code solves the 13th challange in projecteuler.net"""
 
 
 def read_data(file_name: str) -> list[int]:
