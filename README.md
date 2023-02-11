@@ -3,5 +3,5 @@
 Depois de 10 desafios, eu decidi que a línguagem que mais estou acostumado para resolve-los é <b>Python</b>
 <br>
 ##### Todo:
-- Trocar os nomes das pastas para o nome dos desafios.
-- Adicionar big O notation para os códigos em python.
+- Trocar os nomes das pastas para o nome dos desafios. [X]
+- Adicionar big O notation para os códigos em python.  [ ]
