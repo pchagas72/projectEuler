@@ -1,4 +1,4 @@
-"""This is the python code for the 9th challange in projecteuler.com"""
+"""This is the python code for the 9th challange in projecteuler.net"""
 
 
 def solve(limit: int) -> int:
